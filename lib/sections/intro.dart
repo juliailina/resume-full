@@ -39,7 +39,7 @@ class Intro extends StatelessWidget {
           const SizedBox(height: 40),
           TextBox(
             text:
-                'Currently combining programming studies with mobile flutter projects. Looking for a remote/hybrid Junior developer position in a team of flutter developers, whom I can learn from and be useful to. I\'m ready to deep dive into work in development, improve my skills and gain experience.\n\nPassionate about digital, tech, travelling, discovering cultures (I\'m a spanish resident and british college alumni) & languages: I used to work in 5 languages in my hotel management and digital marketing past. Want to constantly improve personally and professionally and make a positive contribution to the community.',
+                'I\'m a driven professional with a broad technical skill set. A focused and detail-oriented Flutter developer offering exceptional troubleshooting skills, ability to multitask, work in teams and adapt to new environments and technologies quickly. Currently combining programming studies with mobile and web projects using Flutter. Looking for a Junior Developer position, remote or hybrid in Barcelona.\n\nPassionate about digital, tech, traveling, discovering cultures (I\'m a Spanish resident and British college alumni) & languages: I used to work in 5 languages in my hotel management and digital marketing past. Want to constantly improve my personal and professional skills and make a positive contribution to the community.',
           ),
           Padding(
             padding: const EdgeInsets.all(40.0),
