@@ -1,28 +1,43 @@
-import 'package:flutter/material.dart';
+class Constants {
+  // Spacer Sizes
+  static const double xXSmallSpacer = 5;
+  static const double xSmallSpacer = 10;
+  static const double smallSpacer = 20;
+  static const double mediumSpacer = 30;
+  static const double largeSpacer = 40;
+  static const double xLargeSpacer = 50;
+  static const double xXLargeSpacer = 100;
 
-//App colors
-const kBackgroundColor = Color(0xFF1E1E1E);
-const kForegroundColor = Color(0xFF2D2D30);
-const kButtonColor = Color(0xFFA17D49);
+  // Border Radius
+  static const double downloadButtonRadius = 50;
+  static const double expansionTileRadius = 30;
 
-//Text Colors
-const kMainTextColor = Color(0xFFD2D2D2); //text
-const kGreyColor = Color(0xFFA1A1A1); //comment
-const kOrangeColor = Color(0xFFCE9178);
-const kYellowColor = Color(0xFFD3D3A4);
-const kPinkColor = Color(0xFFEDA1B0);
-const kBlueColor = Color(0xFF6FA7D6);
-const kGreenColor = Color(0xFF3AADA3);
-const kPurpleColor = Color(0xFFAB7BBD);
+  // Avatar Image Sizes
+  static const double smallAvatarRadius = 75;
+  static const double largeAvatarRadius = 120;
 
-//Text Styles
-const kBodyTextStyle = TextStyle(fontSize: 14, height: 1.5);
-const kHyperlinkStyle = TextStyle(
-  fontSize: 16,
-  height: 1.5,
-  color: kGreenColor,
-);
-const kHeadingStyle = TextStyle(fontSize: 25, fontWeight: FontWeight.w700);
-const kSubheadingStyle =
-    TextStyle(fontSize: 20, fontWeight: FontWeight.w500, height: 1.5);
-const kButtonTextStyle = TextStyle(fontSize: 18);
+  // Screen Size Factors
+  static const double screenWidthFactor = 0.7;
+  static const double webImageWidthFactor = 0.5;
+  static const double appImageHeightFactor = 0.3;
+
+  // Animated Text Params
+  static const int animatedTextDuration = 150;
+  static const String animatedTextCursor = '_';
+
+  // Line Break
+  static const String lineBreak = '\n';
+  static const String lineBreakDouble = '\n\n';
+  static const String lineBreakTriple = '\n\n\n';
+
+  // Avatar Image Paths
+  static const String smallAvatarImage = 'assets/images/avatar.png';
+  static const String largeAvatarImage = 'assets/images/mystory.png';
+
+  // Project Image Paths
+  static const String webCVImage = 'assets/images/cvwebsite.png';
+  static const String appRiverImage = 'assets/images/river.gif';
+  static const String appMerceImage = 'assets/images/merce.gif';
+  static const String appDestressoImage = 'assets/images/destresso.gif';
+  static const String appMockupsImage = 'assets/images/mockups.gif';
+}

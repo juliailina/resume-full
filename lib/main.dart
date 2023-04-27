@@ -1,61 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:resume/sections/education.dart';
-import 'package:resume/sections/experience.dart';
-import 'package:resume/sections/intro.dart';
-import 'package:resume/sections/mystory.dart';
-import 'package:resume/sections/otherwork.dart';
-import 'package:resume/sections/projects.dart';
-import 'package:resume/sections/skills.dart';
-import 'constants.dart';
+import 'package:resume/sections/education_section.dart';
+import 'package:resume/sections/experience_section.dart';
+import 'package:resume/sections/intro_section.dart';
+import 'package:resume/sections/my_story_section.dart';
+import 'package:resume/sections/other_work_section.dart';
+import 'package:resume/sections/projects_section.dart';
+import 'package:resume/sections/skills_section.dart';
+import 'package:resume/text_strings.dart';
+import 'package:resume/styles.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const YuliaCV());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class YuliaCV extends StatelessWidget {
+  const YuliaCV({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Yulia CV',
+      title: CustomTextStrings.webName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        canvasColor: kBackgroundColor,
-        scaffoldBackgroundColor: kBackgroundColor,
-        fontFamily: 'JetBrainsMono',
-        textTheme: const TextTheme(
-          bodyText2: TextStyle(),
-        ).apply(
-          bodyColor: kMainTextColor,
-        ),
-      ),
-      home: const MyHomePage(),
+      theme: CustomAppTheme.appTheme,
+      home: const YuliaCVHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class YuliaCVHomePage extends StatefulWidget {
+  const YuliaCVHomePage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<YuliaCVHomePage> createState() => _YuliaCVHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _YuliaCVHomePageState extends State<YuliaCVHomePage> {
   @override
   Widget build(BuildContext context) {
-    // var size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
         children: const [
-          Intro(),
-          Skills(),
-          Experience(),
-          Education(),
-          Projects(),
-          OtherWork(),
-          MyStory(),
+          IntroSection(),
+          SkillsSection(),
+          ExperienceSection(),
+          EducationSection(),
+          ProjectsSection(),
+          OtherWorkSection(),
+          MyStorySection(),
         ],
       ),
     );

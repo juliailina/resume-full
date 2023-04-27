@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:resume/elements/textbox_widget.dart';
+import 'package:resume/constants.dart';
+import 'package:resume/widgets/custom_textbox.dart';
 
 class ProjectWidget extends StatefulWidget {
+  final String projectText;
+  final List<Widget> buttons;
+  final List<Widget> shots;
+
   const ProjectWidget({
     Key? key,
     required this.projectText,
     this.buttons = const [],
     this.shots = const [],
   }) : super(key: key);
-
-  final String projectText;
-  final List<Widget> buttons;
-  final List<Widget> shots;
 
   @override
   State<ProjectWidget> createState() => _ProjectWidgetState();
@@ -28,24 +29,31 @@ class _ProjectWidgetState extends State<ProjectWidget> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        TextBox(
+        CustomTextbox(
           text: widget.projectText,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(
+          height: Constants.smallSpacer,
+        ),
         SizedBox(
-          width: size.width * .7,
+          width: size.width * Constants.screenWidthFactor,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: widget.shots,
           ),
         ),
-        const SizedBox(height: 10),
+        const SizedBox(
+          height: Constants.xSmallSpacer,
+        ),
         SizedBox(
-          width: size.width * .7,
+          width: size.width * Constants.screenWidthFactor,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: widget.buttons,
           ),
+        ),
+        const SizedBox(
+          height: Constants.xLargeSpacer,
         ),
       ],
     );
